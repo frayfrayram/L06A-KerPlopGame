@@ -6,12 +6,12 @@ package levelPieces;
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
-public class nonMovePrize extends GamePiece {
+public class NonMovePrize extends GamePiece {
 	public int loc;
 	public char sym;
 	public boolean stillAvailable = true;
 	
-	public nonMovePrize(char symbol, int location, String label){	
+	public NonMovePrize(char symbol, int location, String label){
 		super(symbol, label, location);
 		loc = location;
 		sym = symbol;

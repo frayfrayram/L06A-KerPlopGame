@@ -7,9 +7,9 @@ import gameEngine.GameEngine;
 import gameEngine.Moveable;
 import gameEngine.InteractionResult;
 
-public class dude extends GamePiece implements Moveable{
+public class Dude extends GamePiece implements Moveable{
 	
-	public dude(char symbol, String label, int location) {
+	public Dude(char symbol, String label, int location) {
 		super(symbol, label, location);
 	}
 
