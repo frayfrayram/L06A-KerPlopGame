@@ -13,11 +13,13 @@ public class Hole extends GamePiece {
      */
     public Hole(char symbol, String label, int location) {
         super(symbol, label, location);
+		System.out.println(symbol + " is a " + label);
     }
 
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         if(playerLocation == getLocation()){
+        	System.out.println("You fell in the hole! You're stupid! DUMBASS!2");
             return InteractionResult.KILL;
         }
         return InteractionResult.NONE;

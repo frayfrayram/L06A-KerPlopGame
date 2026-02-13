@@ -15,6 +15,7 @@ public class Turret extends GamePiece {
      */
     public Turret(char symbol, String label, int location) {
         super(symbol, label, location);
+		System.out.println(symbol + " is a " + label);
     }
 
     @Override
@@ -22,6 +23,7 @@ public class Turret extends GamePiece {
         Random rand = new Random();
         rand.setSeed(System.currentTimeMillis());
         if (rand.nextInt(10) > 7) {
+        	System.out.println("The turret hit you!");
             return InteractionResult.HIT;
         }
         return InteractionResult.NONE;

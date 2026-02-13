@@ -13,6 +13,7 @@ public class NonMovePrize extends GamePiece {
 	
 	public NonMovePrize(char symbol, String label, int location){
 		super(symbol, label, location);
+		System.out.println(symbol + " is a " + label);
 		loc = location;
 		sym = symbol;
 	}

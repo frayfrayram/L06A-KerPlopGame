@@ -14,6 +14,7 @@ public class MovePrize extends GamePiece implements Moveable {
      */
     public MovePrize(char symbol, String label, int location) {
         super(symbol, label, location);
+		System.out.println(symbol + " is a " + label);
     }
 
     @Override
@@ -36,6 +37,7 @@ public class MovePrize extends GamePiece implements Moveable {
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         if (getLocation() == playerLocation) {
+        	System.out.println("You found a BIG prize!");
             return InteractionResult.ADVANCE;
         }
         return InteractionResult.NONE;

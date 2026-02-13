@@ -18,11 +18,11 @@ public class LevelSetup {
     public Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
     public GamePiece Dude = new Dude('D', "just a chill dude", 14);
     public Drawable Ghost = new Ghost('G');
-    public GamePiece Goomba = new Goomba('g', "little guy from mario", 8);
-    public GamePiece Hole = new Hole('H', "A very deep hole", 13);
-    public GamePiece MovePrize = new MovePrize('X', "a moving box of goodies", 9);
-    public GamePiece nonMovePrize1 = new NonMovePrize('x', "a non moving prize", 2);
-    public GamePiece nonMovePrize2 = new NonMovePrize('x', "a non moving prize", 7);
+    public GamePiece Goomba = new Goomba('g', "goomba (little guy from mario)", 8);
+    public GamePiece Hole = new Hole('H', "very deep hole", 13);
+    public GamePiece MovePrize = new MovePrize('X', "moving box of goodies", 9);
+    public GamePiece nonMovePrize1 = new NonMovePrize('x', "non moving prize", 2);
+    public GamePiece nonMovePrize2 = new NonMovePrize('x', "non moving prize", 7);
     public GamePiece Turret = new Turret('T', "dangerous turret!", (GameEngine.BOARD_SIZE - 1));
 
     

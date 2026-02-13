@@ -11,6 +11,7 @@ public class Dude extends GamePiece implements Moveable{
 	
 	public Dude(char symbol, String label, int location) {
 		super(symbol, label, location);
+		System.out.println(symbol + " is " + label);
 	}
 
 
