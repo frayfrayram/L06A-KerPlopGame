@@ -11,7 +11,7 @@ public class NonMovePrize extends GamePiece {
 	public char sym;
 	public boolean stillAvailable = true;
 	
-	public NonMovePrize(char symbol, int location, String label){
+	public NonMovePrize(char symbol, String label, int location){
 		super(symbol, label, location);
 		loc = location;
 		sym = symbol;

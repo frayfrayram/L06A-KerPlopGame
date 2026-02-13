@@ -29,6 +29,8 @@ public class MovePrize extends GamePiece implements Moveable {
         // Normalize
         moveDir /= Math.abs(moveDir);
         setLocation(getLocation() + moveDir);
+        gameBoard[location] = null;
+        gameBoard[getLocation()] = this;
     }
 
     @Override

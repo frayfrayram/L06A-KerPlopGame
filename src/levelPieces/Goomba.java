@@ -28,8 +28,11 @@ public class Goomba extends GamePiece implements Moveable {
     @Override
     public void move(Drawable[] gameBoard, int playerLocation) {
         int moveDir = playerLocation - getLocation();
+        int oldLocation = this.getLocation();
         // Normalize
         moveDir /= Math.abs(moveDir);
         setLocation(getLocation() + moveDir);
+        gameBoard[oldLocation] = null;
+        gameBoard[this.getLocation()] = this;
     }
 }

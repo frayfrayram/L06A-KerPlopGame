@@ -9,28 +9,45 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import gameEngine.Drawable;
+import gameEngine.GameEngine;
 import gameEngine.Moveable;
 
 //Creates game pieces as public objects within levelSetuo(might be a better way to do this but this seems to work)
 public class LevelSetup {
     public int levelNum;
-    public Drawable[] gameBoard = new Drawable[10];
-    public GamePiece nonMovingPrize1 = new NonMovePrize('X', 2, "Non moving prize");
-    public GamePiece nonMovingPrize2 = new NonMovePrize('X', 7, "Non moving prize");
+    public Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+    public GamePiece Dude = new Dude('D', "just a chill dude", 14);
+    public Drawable Ghost = new Ghost('G');
+    public GamePiece Goomba = new Goomba('g', "little guy from mario", 8);
+    public GamePiece Hole = new Hole('H', "A very deep hole", 13);
+    public GamePiece MovePrize = new MovePrize('X', "a moving box of goodies", 9);
+    public GamePiece nonMovePrize1 = new NonMovePrize('x', "a non moving prize", 2);
+    public GamePiece nonMovePrize2 = new NonMovePrize('x', "a non moving prize", 7);
+    public GamePiece Turret = new Turret('T', "dangerous turret!", (GameEngine.BOARD_SIZE - 1));
+
+    
 
 
     //Just createsLevel
     public void createLevel(int num) {
         levelNum = num;
-
-
     }
 
     //Adds our objects to game board and returns complete board
     public Drawable[] getBoard() {
-        gameBoard[nonMovingPrize1.getLocation()] = new Goomba('G',"Goomba",2);
-        gameBoard[nonMovingPrize2.getLocation()] = nonMovingPrize2;
-        return gameBoard;
+    	if(levelNum == 1) {
+    		gameBoard[Dude.getLocation()] = Dude;
+    		gameBoard[11] = Ghost;
+    		gameBoard[Hole.getLocation()] = Hole;
+    		gameBoard[nonMovePrize1.getLocation()] = nonMovePrize1;
+    		gameBoard[nonMovePrize2.getLocation()] = nonMovePrize2;
+    		return gameBoard;
+    	} else if(levelNum == 2) {
+		gameBoard[Goomba.getLocation()] = Goomba;
+		gameBoard[MovePrize.getLocation()] = MovePrize;
+		gameBoard[Turret.getLocation()] = Turret;
+		return gameBoard;
+    	} else return null;
     }
 
     private <T> ArrayList<T> getTypes(Class<T> clazz) {

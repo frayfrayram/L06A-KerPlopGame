@@ -16,10 +16,13 @@ public class Dude extends GamePiece implements Moveable{
 
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		this.location++;
-		if(this.location == GameEngine.BOARD_SIZE) {
-			this.location = 0;
+		int oldLocation = getLocation();
+		if(getLocation() == (GameEngine.BOARD_SIZE - 1)) {
+			setLocation(0);
 		}
+		setLocation(getLocation() + 1);
+		gameBoard[oldLocation] = null;
+		gameBoard[getLocation()] = this;
 	}
 
 	@Override
