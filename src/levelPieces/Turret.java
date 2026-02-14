@@ -22,7 +22,7 @@ public class Turret extends GamePiece {
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         Random rand = new Random();
         rand.setSeed(System.currentTimeMillis());
-        if (rand.nextInt(10) > 7) {
+        if (rand.nextInt(9) > 7) {
         	System.out.println("The turret hit you!");
             return InteractionResult.HIT;
         }

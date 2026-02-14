@@ -20,7 +20,7 @@ public class Goomba extends GamePiece implements Moveable {
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
 
-		if (Math.abs(getLocation() - playerLocation) < 1) {
+		if (Math.abs(getLocation() - playerLocation) < 2) {
 			System.out.println("The goomba hit you!");
 			return InteractionResult.HIT;
 		}
