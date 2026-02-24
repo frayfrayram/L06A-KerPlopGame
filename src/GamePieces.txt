@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Franklin Rambo, Nicolas Finnochio\
+\
+GamePieces:\
+Level 1 pieces:\
+	Dude:\
+		Symbol = D\
+		just a dude, walks from left to right until he hits the end of the board, then resets at the left. \
+		Interaction result = none\
+	Ghost:\
+		Just a drawable, no interaction or movement\
+		symbol = G\
+	Hole:\
+		symbol = H\
+		A hole for the player to fall in, does not move\
+		interaction result = kill\
+	NonMovePrize:\
+		symbol = x\
+		A prize for the player to get, does not move\
+		interaction result = get point (disappears after collecting)\
+Level 2 pieces:\
+	Goomba:\
+		Symbol = g\
+		enemy for the player to avoid, hits from a distance and moves (approaches player as player 		moves)\
+		interaction result = hit\
+	MovePrize:\
+		Symbol = X\
+		moving prize for the player, wins the game, moves away from player as player moves\
+		interaction result = advance\
+	Turret:\
+		Symbol = T\
+		Non moving enemy, shoots at player. Uses random integer to decide if player is hit by 		movement. Doesn\'92t actually move randomly, but the hitbox does.\
+		interaction result = hit}

@@ -19,7 +19,7 @@ public class Hole extends GamePiece {
     @Override
     public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
         if(playerLocation == getLocation()){
-        	System.out.println("You fell in the hole! You're stupid! DUMBASS!2");
+        	System.out.println("You fell in the hole!");
             return InteractionResult.KILL;
         }
         return InteractionResult.NONE;
